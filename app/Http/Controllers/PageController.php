@@ -16,11 +16,11 @@ class PageController extends Controller
     }
 
     /**
-    * Mostra la pagina posts
-    * @return view posts
+    * Mostra la pagina categories
+    * @return view categories
     */
-    public function posts(){  
-        return view('posts');
+    public function categories(){  
+        return view('categories');
     }
 
     /**

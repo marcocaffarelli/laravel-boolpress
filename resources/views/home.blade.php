@@ -1,4 +1,4 @@
 @extends('layouts.app')
-@section('home')
+@section('main')
     <h1>home laravel-boolpress</h1>
 @endsection
