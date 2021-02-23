@@ -18,8 +18,8 @@
     export default {
         mounted() {
             console.log('Component mounted.')
-            axios.get('articles').then(response =>{
-                console.log(response);
+            axios.get('api/articles').then(response =>{
+                console.log(response.data.response);
             }).catch(error => {
                 console.log(error);
             })
