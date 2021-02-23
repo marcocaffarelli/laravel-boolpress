@@ -22,4 +22,12 @@ class PageController extends Controller
     public function posts(){  
         return view('posts');
     }
+
+    /**
+    * Mostra la pagina articles
+    * @return view articles
+    */
+    public function articles(){  
+        return view('articles');
+    }
 }
