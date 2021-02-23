@@ -1,5 +1,30 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: darkblue;
+}
+
+header nav {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+header nav .active {
+  color: gold;
+}
+
+.home h1 {
+  text-align: center;
+  font-size: 80px;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
