@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PageController@home')->name('home');
 Route::get('categories', 'PageController@categories')->name('categories');
 Route::get('articles', 'PageController@articles')->name('articles');
+Route::get('tags', 'PageController@tags')->name('tags');
+
 
 
 
