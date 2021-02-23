@@ -30,4 +30,12 @@ class PageController extends Controller
     public function articles(){  
         return view('articles');
     }
+
+    /**
+    * Mostra la pagina tags
+    * @return view tags
+    */
+    public function tags(){  
+        return view('tags');
+    }
 }
