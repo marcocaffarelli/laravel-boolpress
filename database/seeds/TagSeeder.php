@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Generator as Faker;
+use App\Tag;
 
 class TagSeeder extends Seeder
 {
@@ -9,8 +11,12 @@ class TagSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
-        //
+        for ($i=0; $i < 100 ; $i++) { 
+            $newTag = new Tag();
+            $newTag->tag = $faker->word();
+            $newTag->save();
+        }
     }
 }
