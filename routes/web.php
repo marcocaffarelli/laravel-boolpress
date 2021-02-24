@@ -17,9 +17,13 @@ use Illuminate\Support\Facades\Route;
 //     return view('home');
 // });
 Route::get('/', 'PageController@home')->name('home');
+Route::get('blog', 'PageController@blog')->name('blog');
 Route::get('categories', 'PageController@categories')->name('categories');
-Route::get('articles', 'PageController@articles')->name('articles');
+Route::get('vue_articles', 'PageController@vue_articles')->name('vue_articles');
 Route::get('tags', 'PageController@tags')->name('tags');
+
+Route::resource('articles', 'ArticleController');
+
 
 
 

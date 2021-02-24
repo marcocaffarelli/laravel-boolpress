@@ -15,6 +15,16 @@ class PageController extends Controller
         return view('home');
     }
 
+        /**
+    * Mostra la pagina Blog
+    * @return view blog
+    */
+    public function blog(){
+        //$articles = Article::all(); 
+        $articles = Article::latest()->get();   
+        return view('blog', compact('articles'));
+    }
+
     /**
     * Mostra la pagina categories
     * @return view categories
@@ -27,8 +37,8 @@ class PageController extends Controller
     * Mostra la pagina articles
     * @return view articles
     */
-    public function articles(){  
-        return view('articles');
+    public function vue_articles(){  
+        return view('vue_articles');
     }
 
     /**
