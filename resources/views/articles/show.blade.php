@@ -6,6 +6,7 @@
             <p class="body"><strong>BODY: </strong>{{$article->description}}</p>
             <p class="data"><strong>CREATED: </strong>{{$article->created_at}}</p>
             <p class="data"><strong>UPDATED: </strong>{{$article->updated_at}}</p>
+            <p><strong>CATEGORY: </strong>{{$article->category->name}}</p>
         </div>
         <a href="{{ route('blog') }}" class="btn">RETURN</a>
     </div>
