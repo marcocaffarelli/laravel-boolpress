@@ -14,7 +14,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        //$articles = Article::all();
+        $articles = Article::latest()->get();
         //dd($articles);
         return view('articles.index', compact('articles'));
     }
@@ -26,7 +27,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('articles.create');
     }
 
     /**
@@ -37,7 +38,12 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $article = new Article;
+        $article->title = request('title');
+        $article->description = request('description');
+        $article->save();
+
+        return redirect()->route('blog');
     }
 
     /**
