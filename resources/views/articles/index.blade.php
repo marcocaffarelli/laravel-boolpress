@@ -4,7 +4,7 @@
         <h2>ARTICLES</h2>
         <a href="{{route('articles.create')}}"><button class="btn bg-primary">Crea un nuovo articolo</button></a>
         @foreach($articles as $article)
-            <div class="post row d-flex">
+            <div class="article row d-flex">
                 <div class="col-lg-2">
                     <h3><strong>TITOLO: </strong><br>{{$article->title}}</h3>
                 </div>

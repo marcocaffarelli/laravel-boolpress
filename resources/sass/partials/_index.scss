@@ -1,0 +1,35 @@
+.index{
+    background-image:  linear-gradient(270deg, rgba(70,183,255,1) 2%, rgba(21,3,193,1) 54%);
+    padding: 30px;
+    h2{
+        color: $body-bg;
+    }
+    a{
+        .btn{
+            background-color: $orange;
+            color: $body-bg;
+        }
+    }
+    .article{
+        border: 1px solid black;
+        margin: 10px 0;
+        padding: 10px 0;
+        background-color: $body-bg;
+        div{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
+            a{
+                height: 50px;
+                width: 100px;
+                margin-left: 15px;
+            }
+        }
+        form{
+            button{
+                height: 50px;
+                width: 100px;
+            }
+        }
+    }
+}
