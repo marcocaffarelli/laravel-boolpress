@@ -22,6 +22,11 @@
                         View
                     </a>
                 </div>
+                <div>
+                    <a href="{{route('articles.edit', ['article'=> $article->id])}}" class="col btn bg-warning">
+                        Edit
+                    </a>
+                </div>
             </div>
         @endforeach
     </div>
