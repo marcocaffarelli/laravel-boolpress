@@ -17,6 +17,11 @@
                 <div class="col">
                     <p><strong>UPDATED: </strong><br>{{$article->updated_at}}</p>        
                 </div>
+                <div>
+                    <a href="{{route('articles.show', ['article'=> $article->id])}}" class="col btn bg-primary">
+                        View
+                    </a>
+                </div>
             </div>
         @endforeach
     </div>
