@@ -93,6 +93,9 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        //dd($article);
+        $article->delete();
+        return redirect()->route('blog');
+
     }
 }

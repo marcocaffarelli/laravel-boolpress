@@ -27,6 +27,11 @@
                         Edit
                     </a>
                 </div>
+                <form action="{{ route('articles.destroy', $article->id) }}" class="col" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn bg-danger">Delete</button>
+                </form>
             </div>
         @endforeach
     </div>
