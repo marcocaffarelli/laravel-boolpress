@@ -19,6 +19,7 @@
         data(){
             return {
                 categories: "",
+                selected:"Tutti",
             }
         },
         mounted() {

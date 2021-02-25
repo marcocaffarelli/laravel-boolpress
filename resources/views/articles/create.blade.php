@@ -14,6 +14,13 @@
                     <textarea name="description" id="description" cols="30" rows="5" placeholder="inserisci il testo"></textarea>
                 </div>
                 <button type="submit" class="btn bg-primary">SUBMIT</button>
+                <select>
+                        <option>Tutti</option>
+                        <option>Rock</option>
+                        <option>Jazz</option>
+                        <option>Pop</option>
+                        <option>Metal</option>
+                </select>
                 
             </form>            
         </div>

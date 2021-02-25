@@ -63,12 +63,13 @@ header nav .active {
 .index .article div a {
   height: 50px;
   width: 100px;
-  margin-left: 15px;
+  margin: 0 15px;
 }
 
-.index .article form button {
+.index .article div button {
   height: 50px;
   width: 100px;
+  margin: 0 15px;
 }
 
 .show {

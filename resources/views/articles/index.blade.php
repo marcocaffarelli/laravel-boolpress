@@ -27,12 +27,35 @@
                         Edit
                     </a>
                 </div>
-                <form action="{{ route('articles.destroy', $article->id) }}" class="col" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn bg-danger">Delete</button>
-                </form>
+                <div>
+                <!-- Button trigger modal -->           
+                    <button type="button" class="col btn bg-danger" data-toggle="modal" data-target="#delete-{{$article->id}}" >Delete</button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="delete-{{$article->id}}" tabindex="-1" role="dialog" aria-labelledby="#delete-{{$article->id}}" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="article-delete-{{$article->id}}">Delete article: {{$article->title}}</h5>
+                            </div>
+                            <div class="modal-body">
+                                Sei sicuro?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <form action="{{ route('articles.destroy', $article->id) }}" class="col" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                    <button type="submit" class="btn btn-primary">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         @endforeach
     </div>
 </body>
+
+
+
