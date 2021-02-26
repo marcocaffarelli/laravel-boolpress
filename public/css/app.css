@@ -125,7 +125,7 @@ header nav .active {
 .create .container_form {
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 400px;
   width: 500px;
   background-color: #ffc04b;
   box-shadow: 1px 1px 10px white;
@@ -179,7 +179,7 @@ header nav .active {
 .edit .container_form {
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 400px;
   width: 500px;
   background-color: #ffc04b;
   box-shadow: 1px 1px 10px white;

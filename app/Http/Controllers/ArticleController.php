@@ -38,11 +38,15 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $article = new Article;
-        $article->title = request('title');
-        $article->description = request('description');
-        $article->save();
-
+        $validazione = $request->validate([
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+        // $article = new Article;
+        // $article->title = request('title');
+        // $article->description = request('description');
+        // $article->save();
+        Article::create($validazione);    
         return redirect()->route('blog');
     }
 
@@ -79,9 +83,14 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        $data = $request->all();
-        $article->update($data);
+        $validazione = $request->validate([
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+        // $data = $request->all();
+        // $article->update($data);
 
+        $article->update($validazione);  
         return redirect()->route('blog');
     }
 
