@@ -43,7 +43,8 @@ class ArticleController extends Controller
     {
         $validazione = $request->validate([
             'title' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'tags' => 'exists:tags,id'
         ]);
         // $article = new Article;
         // $article->title = request('title');
@@ -67,6 +68,7 @@ class ArticleController extends Controller
     public function show(Article $article)
     {
        //dd($article->title, $article->body);
+       //dd($article->tags);
        return view('articles.show', compact('article'));
     }
 
@@ -79,7 +81,8 @@ class ArticleController extends Controller
     public function edit(Article $article)
     {
         //dd($article);
-        return view('articles.edit', compact('article'));
+        $tags = Tag::all();
+        return view('articles.edit', compact('article','tags'));
     }
 
     /**
@@ -93,12 +96,14 @@ class ArticleController extends Controller
     {
         $validazione = $request->validate([
             'title' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'tags' => 'exists:tags,id'
         ]);
         // $data = $request->all();
         // $article->update($data);
-
-        $article->update($validazione);  
+        //dd($request->tags);
+        $article->update($validazione); 
+        $article->tags()->sync($request->tags);  
         return redirect()->route('blog');
     }
 

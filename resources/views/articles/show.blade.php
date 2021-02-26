@@ -6,7 +6,7 @@
             <p class="body"><strong>BODY: </strong>{{$article->description}}</p>
             <p class="data"><strong>CREATED: </strong>{{$article->created_at}}</p>
             <p class="data"><strong>UPDATED: </strong>{{$article->updated_at}}</p>
-            <span><strong>CATEGORY: </strong>{{$article->category->name}}</span>
+            
             <div><strong>TAGS: </strong>
             @if( count($article->tags) > 0 )
                 @foreach ($article->tags as $tag)
