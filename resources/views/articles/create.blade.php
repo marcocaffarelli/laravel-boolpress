@@ -21,6 +21,20 @@
                 @enderror
 
                 <div class="form-group">
+                    <label for="tags">Categories</label>
+                    <select class="form-control" name="categories" id="categories">
+                        @if($categories)
+                            @foreach($categories as $category)
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
+                        @endif
+                    </select>
+                </div>
+
+                @error('tags')
+                    <div class="alert alert-danger">{{$message}}</div>
+                @enderror
+                <div class="form-group">
                     <label for="tags">Tags</label>
                     <select class="form-control" name="tags[]" id="tags" multiple>
                         @if($tags)

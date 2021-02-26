@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Tag;
+use App\Category;
 
 use Illuminate\Http\Request;
 
@@ -30,7 +31,8 @@ class ArticleController extends Controller
     public function create()
     {
         $tags = Tag::all();
-        return view('articles.create', compact('tags'));
+        $categories = Category::all();
+        return view('articles.create', compact('tags', 'categories'));
     }
 
     /**
@@ -44,7 +46,8 @@ class ArticleController extends Controller
         $validazione = $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'tags' => 'exists:tags,id'
+            'tags' => 'exists:tags,id',
+
         ]);
         // $article = new Article;
         // $article->title = request('title');
@@ -56,6 +59,12 @@ class ArticleController extends Controller
         $new_article = Article::orderBY('id', 'desc')->first(); 
         //dd($new_article);
         $new_article->tags()->attach($request->tags);
+        
+        $category = new Category;
+        $category->name = request('name');
+        $category->description = request('description');
+        $category->save();
+        
         return redirect()->route('blog', $new_article);
     }
 
