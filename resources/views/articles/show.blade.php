@@ -6,10 +6,9 @@
             <p class="body"><strong>BODY: </strong>{{$article->description}}</p>
             <p class="data"><strong>CREATED: </strong>{{$article->created_at}}</p>
             <p class="data"><strong>UPDATED: </strong>{{$article->updated_at}}</p>
-            <!-- category -->
-            <span><strong>CATEGORY: </strong>{{$article->category->name}}</span>
+
             <!-- tags -->
-            <div><strong>TAGS: </strong>
+            <span><strong>TAGS: </strong>
             @if( count($article->tags) > 0 )
                 @foreach ($article->tags as $tag)
                     <span>{{$tag->tag}}</span>
@@ -17,7 +16,7 @@
             @else
                 <span>N/A</span>
             @endif
-            </div>
+            </span>
         </div>
         <a href="{{ route('blog') }}" class="btn">RETURN</a>
     </div>

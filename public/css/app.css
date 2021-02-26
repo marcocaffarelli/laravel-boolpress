@@ -100,8 +100,7 @@ header nav .active {
   font-size: 12px;
 }
 
-.show div span,
-.show div div {
+.show div span {
   color: white;
 }
 

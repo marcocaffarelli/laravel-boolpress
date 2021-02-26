@@ -13,7 +13,7 @@ class TagSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i=0; $i < 100 ; $i++) { 
+        for ($i=0; $i < 20 ; $i++) { 
             $newTag = new Tag();
             $newTag->tag = $faker->word();
             $newTag->save();
