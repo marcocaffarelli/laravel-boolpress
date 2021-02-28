@@ -29,8 +29,8 @@ class PageController extends Controller
     * Mostra la pagina categories
     * @return view categories
     */
-    public function categories(){  
-        return view('categories');
+    public function vue_categories(){  
+        return view('vue_categories');
     }
 
     /**
@@ -45,7 +45,7 @@ class PageController extends Controller
     * Mostra la pagina tags
     * @return view tags
     */
-    public function tags(){  
-        return view('tags');
+    public function vue_tags(){  
+        return view('vue_tags');
     }
 }

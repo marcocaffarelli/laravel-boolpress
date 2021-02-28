@@ -18,11 +18,13 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', 'PageController@home')->name('home');
 Route::get('blog', 'PageController@blog')->name('blog');
-Route::get('categories', 'PageController@categories')->name('categories');
+Route::get('vue_categories', 'PageController@vue_categories')->name('vue_categories');
 Route::get('vue_articles', 'PageController@vue_articles')->name('vue_articles');
-Route::get('tags', 'PageController@tags')->name('tags');
+Route::get('vue_tags', 'PageController@vue_tags')->name('vue_tags');
 
 Route::resource('articles', 'ArticleController');
+Route::resource('categories', 'CategoryController');
+
 
 
 
