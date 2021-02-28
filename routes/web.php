@@ -24,6 +24,8 @@ Route::get('vue_tags', 'PageController@vue_tags')->name('vue_tags');
 
 Route::resource('articles', 'ArticleController');
 Route::resource('categories', 'CategoryController');
+Route::resource('tags', 'TagController');
+
 
 
 
