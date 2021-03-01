@@ -3,7 +3,7 @@
     <div class="index">
         <h2>TAGS</h2>
         <a href="{{route('tags.create')}}"><button class="btn bg-primary">Crea un nuovo tag</button></a>
-        @foreach($tagsCrud as $tag)
+        @foreach($tags as $tag)
             <div class="article row d-flex">
                 <div class="col-lg-2">
                     <h3><strong>TAG: </strong><br>{{$tag->tag}}</h3>
